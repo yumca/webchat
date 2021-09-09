@@ -58,7 +58,7 @@ func (s *NetService) Register(serviceType, address string) {
 
 func (s *NetService) Start() {
 	if len(s.Service) > 0 {
-		for k, _ := range s.Service {
+		for k := range s.Service {
 			s.NewServer(k)
 		}
 	}

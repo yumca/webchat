@@ -80,11 +80,15 @@ func (wss *WsServer) wsHandleFunc(w http.ResponseWriter, r *http.Request) {
 			log.Println(err)
 			return
 		}
-		result := routerHandler.CallBackWs(wsConn, p)
-		if err := ws.WriteMessage(messageType, result); err != nil {
-			log.Println(err)
-			return
+		passedArguments := wss.Routes.PassedArgs(&routerHandler, wsConn, p)
+		result := routerHandler.CallBack.Call(passedArguments)
+		if len(result) > 0 {
+			if err := ws.WriteMessage(messageType, result[0].Bytes()); err != nil {
+				log.Println(err)
+				return
+			}
 		}
+
 	}
 }
 
@@ -102,7 +106,7 @@ func (wss *WsServer) bindWsConnection(ws *websocket.Conn, w http.ResponseWriter,
 	return wss.WsServLinks.WsConnections[fd]
 }
 
-func (wss *WsServer) GetWsServLinks(fd int) (ok bool, connection library.WsConn) {
+func (wss WsServer) GetWsServLinks(fd int) (ok bool, connection library.WsConn) {
 	connection, ok = wss.WsServLinks.WsConnections[fd]
 	return
 }

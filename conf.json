@@ -16,8 +16,8 @@
   },
   "Setting": {
     "ServerName": "Chat",
-    "LogFile": "G:\\WWW\\golang\\src\\chat\\go_chat.log",
-    "PidFile": "G:\\WWW\\golang\\src\\chat\\go_chat.pid",
+    "LogFile": "G:\\WWW\\golang\\src\\webchat\\go_chat.log",
+    "PidFile": "G:\\WWW\\golang\\src\\webchat\\go_chat.pid",
     "Daemonize": 0
   },
   "Server": {

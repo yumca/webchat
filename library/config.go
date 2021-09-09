@@ -75,7 +75,7 @@ func GetConfInfo(path string) (conf Config, err error) {
 	}
 	// file, osErr := os.Open(path + "/conf.json")
 	// 打开文件
-	file, osErr := os.Open("G:/WWW/golang/src/chat/conf.json")
+	file, osErr := os.Open("G:/WWW/golang/src/webchat/conf.json")
 	if osErr != nil {
 		err = errors.New("读取Conf配置文件错误")
 		return

@@ -30,6 +30,10 @@ func NewHttpServer(r *Routes, nws *NetworkServer) {
 func (hs *HttpServer) httpHandleFunc(w http.ResponseWriter, r *http.Request) {
 	routerHandler, ok := hs.Routes.Handlers[r.RequestURI]
 	if ok {
-		routerHandler.CallBackHttp(w, r)
+		passedArguments := hs.Routes.PassedArgs(&routerHandler, w, r)
+		result := routerHandler.CallBack.Call(passedArguments)
+		funcType := result[0].Type().String()
+		fmt.Println(funcType)
+		routerHandler.CallBack.Call(passedArguments)
 	}
 }

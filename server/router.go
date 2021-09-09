@@ -1,8 +1,7 @@
 package server
 
 import (
-	"chat/library"
-	"net/http"
+	"reflect"
 	"sync"
 )
 
@@ -12,12 +11,9 @@ type Routes struct {
 }
 
 type RouterHandler struct {
-	ServerType   string
-	ControlName  string
-	CallBackHttp func(http.ResponseWriter, *http.Request)
-	CallBackTcp  func(http.ResponseWriter, *http.Request)
-	CallBackWs   func(library.WsConn, []byte) (p []byte)
-	// CallBack     reflect.Value
+	ServerType  string
+	ControlName string
+	CallBack    reflect.Value
 }
 
 func NewRoutes() *Routes {
@@ -27,20 +23,22 @@ func NewRoutes() *Routes {
 	return r
 }
 
-func (r *Routes) RouterHttp(name string, serverType string, fn func(http.ResponseWriter, *http.Request)) {
+func (r *Routes) Router(name string, serverType string, fn interface{}) {
 	r.Handlers[name] = RouterHandler{
-		serverType, name, fn, nil, nil,
+		serverType, name, reflect.ValueOf(fn),
 	}
 }
 
-func (r *Routes) RouterTcp(name string, serverType string, fn func(http.ResponseWriter, *http.Request)) {
-	r.Handlers[name] = RouterHandler{
-		serverType, name, nil, fn, nil,
+func (r *Routes) PassedArgs(callback *RouterHandler, args ...interface{}) []reflect.Value {
+	funcType := callback.CallBack.Type()
+	passedArguments := make([]reflect.Value, len(args))
+	for i, v := range args {
+		if v == nil {
+			passedArguments[i] = reflect.New(funcType.In(i)).Elem()
+		} else {
+			passedArguments[i] = reflect.ValueOf(v)
+		}
 	}
-}
 
-func (r *Routes) RouterWs(name string, serverType string, fn func(library.WsConn, []byte) []byte) {
-	r.Handlers[name] = RouterHandler{
-		serverType, name, nil, nil, fn,
-	}
+	return passedArguments
 }

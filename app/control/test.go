@@ -13,7 +13,7 @@ func TcpTest(w http.ResponseWriter, r *http.Request) {
 func HttpTest(w http.ResponseWriter, r *http.Request) {
 	r.ParseForm()
 	if r.Method == "GET" {
-		t, err := template.ParseFiles("G:/WWW/golang/src/chat/html/test.html")
+		t, err := template.ParseFiles("G:/WWW/golang/src/webchat/html/test.html")
 		if err != nil {
 			fmt.Fprintf(w, "parse template error: %s", err.Error())
 			return
