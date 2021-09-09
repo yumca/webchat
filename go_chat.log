@@ -1,0 +1,129 @@
+2021/09/08 22:38:51 G:/WWW/golang/src/chat/app/control/test.go:38: websocket: request origin not allowed by Upgrader.CheckOrigin
+2021/09/08 22:43:01 G:/WWW/golang/src/chat/app/control/test.go:51: websocket: request origin not allowed by Upgrader.CheckOrigin
+2021/09/08 22:43:09 G:/WWW/golang/src/chat/app/control/test.go:51: websocket: request origin not allowed by Upgrader.CheckOrigin
+2021/09/08 22:44:32 G:/WWW/golang/src/chat/app/control/test.go:51: websocket: request origin not allowed by Upgrader.CheckOrigin
+2021/09/08 22:45:43 G:/WWW/golang/src/chat/app/control/test.go:51: websocket: request origin not allowed by Upgrader.CheckOrigin
+2021/09/08 22:48:05 G:/WWW/golang/src/chat/app/control/test.go:51: websocket: request origin not allowed by Upgrader.CheckOrigin
+2021/09/08 22:49:42 G:/WWW/golang/src/chat/app/control/test.go:63: websocket: close 1001 (going away)
+2021/09/08 22:49:51 G:/WWW/golang/src/chat/app/control/test.go:63: websocket: close 1001 (going away)
+2021/09/08 22:50:32 G:/WWW/golang/src/chat/app/control/test.go:63: websocket: close 1001 (going away)
+2021/09/08 22:52:38 C:/Users/Administrator/.g/go/src/net/http/server.go:3139: http: panic serving 127.0.0.1:57001: runtime error: invalid memory address or nil pointer dereference
+goroutine 18 [running]:
+net/http.(*conn).serve.func1(0xc0000a6000)
+	C:/Users/Administrator/.g/go/src/net/http/server.go:1824 +0x153
+panic(0x6749c0, 0x953340)
+	C:/Users/Administrator/.g/go/src/runtime/panic.go:971 +0x49a
+chat/app/control.BindWsConnection(0xc0000ba000)
+	G:/WWW/golang/src/chat/app/control/test.go:76 +0x36
+chat/app/control.WsTest(0x754590, 0xc0002600e0, 0xc00027c000)
+	G:/WWW/golang/src/chat/app/control/test.go:60 +0xf2
+net/http.HandlerFunc.ServeHTTP(0x6f6f40, 0x754590, 0xc0002600e0, 0xc00027c000)
+	C:/Users/Administrator/.g/go/src/net/http/server.go:2069 +0x4b
+net/http.(*ServeMux).ServeHTTP(0x9640a0, 0x754590, 0xc0002600e0, 0xc00027c000)
+	C:/Users/Administrator/.g/go/src/net/http/server.go:2448 +0x1b7
+net/http.serverHandler.ServeHTTP(0xc000260000, 0x754590, 0xc0002600e0, 0xc00027c000)
+	C:/Users/Administrator/.g/go/src/net/http/server.go:2887 +0xaa
+net/http.(*conn).serve(0xc0000a6000, 0x754c00, 0xc000268000)
+	C:/Users/Administrator/.g/go/src/net/http/server.go:1952 +0x8cd
+created by net/http.(*Server).Serve
+	C:/Users/Administrator/.g/go/src/net/http/server.go:3013 +0x3b8
+2021/09/08 22:52:40 C:/Users/Administrator/.g/go/src/net/http/server.go:3139: http: panic serving 127.0.0.1:61931: runtime error: invalid memory address or nil pointer dereference
+goroutine 19 [running]:
+net/http.(*conn).serve.func1(0xc0000a60a0)
+	C:/Users/Administrator/.g/go/src/net/http/server.go:1824 +0x153
+panic(0x6749c0, 0x953340)
+	C:/Users/Administrator/.g/go/src/runtime/panic.go:971 +0x49a
+chat/app/control.BindWsConnection(0xc0000ba160)
+	G:/WWW/golang/src/chat/app/control/test.go:76 +0x36
+chat/app/control.WsTest(0x754590, 0xc00031e000, 0xc00030c000)
+	G:/WWW/golang/src/chat/app/control/test.go:60 +0xf2
+net/http.HandlerFunc.ServeHTTP(0x6f6f40, 0x754590, 0xc00031e000, 0xc00030c000)
+	C:/Users/Administrator/.g/go/src/net/http/server.go:2069 +0x4b
+net/http.(*ServeMux).ServeHTTP(0x9640a0, 0x754590, 0xc00031e000, 0xc00030c000)
+	C:/Users/Administrator/.g/go/src/net/http/server.go:2448 +0x1b7
+net/http.serverHandler.ServeHTTP(0xc000260000, 0x754590, 0xc00031e000, 0xc00030c000)
+	C:/Users/Administrator/.g/go/src/net/http/server.go:2887 +0xaa
+net/http.(*conn).serve(0xc0000a60a0, 0x754c00, 0xc000304000)
+	C:/Users/Administrator/.g/go/src/net/http/server.go:1952 +0x8cd
+created by net/http.(*Server).Serve
+	C:/Users/Administrator/.g/go/src/net/http/server.go:3013 +0x3b8
+2021/09/08 22:53:00 C:/Users/Administrator/.g/go/src/net/http/server.go:3139: http: panic serving 127.0.0.1:52686: runtime error: invalid memory address or nil pointer dereference
+goroutine 20 [running]:
+net/http.(*conn).serve.func1(0xc0000a6140)
+	C:/Users/Administrator/.g/go/src/net/http/server.go:1824 +0x153
+panic(0x6749c0, 0x953340)
+	C:/Users/Administrator/.g/go/src/runtime/panic.go:971 +0x49a
+chat/app/control.BindWsConnection(0xc0002a6000)
+	G:/WWW/golang/src/chat/app/control/test.go:76 +0x36
+chat/app/control.WsTest(0x754590, 0xc0002601c0, 0xc00027c100)
+	G:/WWW/golang/src/chat/app/control/test.go:60 +0xf2
+net/http.HandlerFunc.ServeHTTP(0x6f6f40, 0x754590, 0xc0002601c0, 0xc00027c100)
+	C:/Users/Administrator/.g/go/src/net/http/server.go:2069 +0x4b
+net/http.(*ServeMux).ServeHTTP(0x9640a0, 0x754590, 0xc0002601c0, 0xc00027c100)
+	C:/Users/Administrator/.g/go/src/net/http/server.go:2448 +0x1b7
+net/http.serverHandler.ServeHTTP(0xc000260000, 0x754590, 0xc0002601c0, 0xc00027c100)
+	C:/Users/Administrator/.g/go/src/net/http/server.go:2887 +0xaa
+net/http.(*conn).serve(0xc0000a6140, 0x754c00, 0xc000268180)
+	C:/Users/Administrator/.g/go/src/net/http/server.go:1952 +0x8cd
+created by net/http.(*Server).Serve
+	C:/Users/Administrator/.g/go/src/net/http/server.go:3013 +0x3b8
+2021/09/08 22:54:38 C:/Users/Administrator/.g/go/src/net/http/server.go:3139: http: panic serving 127.0.0.1:65095: runtime error: invalid memory address or nil pointer dereference
+goroutine 18 [running]:
+net/http.(*conn).serve.func1(0xc0000a6000)
+	C:/Users/Administrator/.g/go/src/net/http/server.go:1824 +0x153
+panic(0xe647a0, 0x1143340)
+	C:/Users/Administrator/.g/go/src/runtime/panic.go:971 +0x49a
+chat/app/control.BindWsConnection(0xc0000ba000)
+	G:/WWW/golang/src/chat/app/control/test.go:76 +0x2b
+chat/app/control.WsTest(0xf441f0, 0xc0002600e0, 0xc00027c000)
+	G:/WWW/golang/src/chat/app/control/test.go:60 +0xf2
+net/http.HandlerFunc.ServeHTTP(0xee6bc0, 0xf441f0, 0xc0002600e0, 0xc00027c000)
+	C:/Users/Administrator/.g/go/src/net/http/server.go:2069 +0x4b
+net/http.(*ServeMux).ServeHTTP(0x11540a0, 0xf441f0, 0xc0002600e0, 0xc00027c000)
+	C:/Users/Administrator/.g/go/src/net/http/server.go:2448 +0x1b7
+net/http.serverHandler.ServeHTTP(0xc000260000, 0xf441f0, 0xc0002600e0, 0xc00027c000)
+	C:/Users/Administrator/.g/go/src/net/http/server.go:2887 +0xaa
+net/http.(*conn).serve(0xc0000a6000, 0xf44860, 0xc000268000)
+	C:/Users/Administrator/.g/go/src/net/http/server.go:1952 +0x8cd
+created by net/http.(*Server).Serve
+	C:/Users/Administrator/.g/go/src/net/http/server.go:3013 +0x3b8
+2021/09/08 22:54:42 C:/Users/Administrator/.g/go/src/net/http/server.go:3139: http: panic serving 127.0.0.1:49399: runtime error: invalid memory address or nil pointer dereference
+goroutine 19 [running]:
+net/http.(*conn).serve.func1(0xc0000a60a0)
+	C:/Users/Administrator/.g/go/src/net/http/server.go:1824 +0x153
+panic(0xe647a0, 0x1143340)
+	C:/Users/Administrator/.g/go/src/runtime/panic.go:971 +0x49a
+chat/app/control.BindWsConnection(0xc000318160)
+	G:/WWW/golang/src/chat/app/control/test.go:76 +0x2b
+chat/app/control.WsTest(0xf441f0, 0xc000320000, 0xc00030c000)
+	G:/WWW/golang/src/chat/app/control/test.go:60 +0xf2
+net/http.HandlerFunc.ServeHTTP(0xee6bc0, 0xf441f0, 0xc000320000, 0xc00030c000)
+	C:/Users/Administrator/.g/go/src/net/http/server.go:2069 +0x4b
+net/http.(*ServeMux).ServeHTTP(0x11540a0, 0xf441f0, 0xc000320000, 0xc00030c000)
+	C:/Users/Administrator/.g/go/src/net/http/server.go:2448 +0x1b7
+net/http.serverHandler.ServeHTTP(0xc000260000, 0xf441f0, 0xc000320000, 0xc00030c000)
+	C:/Users/Administrator/.g/go/src/net/http/server.go:2887 +0xaa
+net/http.(*conn).serve(0xc0000a60a0, 0xf44860, 0xc000304000)
+	C:/Users/Administrator/.g/go/src/net/http/server.go:1952 +0x8cd
+created by net/http.(*Server).Serve
+	C:/Users/Administrator/.g/go/src/net/http/server.go:3013 +0x3b8
+2021/09/08 23:22:46 G:/WWW/golang/src/chat/app/control/test.go:70: websocket: close 1001 (going away)
+2021/09/08 23:23:15 G:/WWW/golang/src/chat/app/control/test.go:70: websocket: close 1001 (going away)
+2021/09/08 23:28:46 G:/WWW/golang/src/chat/app/control/test.go:70: websocket: close 1001 (going away)
+2021/09/08 23:28:48 G:/WWW/golang/src/chat/app/control/test.go:70: websocket: close 1001 (going away)
+2021/09/08 23:31:27 G:/WWW/golang/src/chat/app/control/test.go:71: websocket: close 1001 (going away)
+2021/09/08 23:33:39 G:/WWW/golang/src/chat/app/control/test.go:70: websocket: close 1001 (going away)
+2021/09/08 23:37:00 G:/WWW/golang/src/chat/app/control/test.go:70: websocket: close 1001 (going away)
+2021/09/08 23:37:03 G:/WWW/golang/src/chat/app/control/test.go:70: websocket: close 1001 (going away)
+2021/09/08 23:37:56 G:/WWW/golang/src/chat/app/control/test.go:70: websocket: close 1001 (going away)
+2021/09/08 23:38:21 G:/WWW/golang/src/chat/app/control/test.go:71: 客户端退出
+2021/09/08 23:39:22 G:/WWW/golang/src/chat/app/control/test.go:71: 客户端退出
+2021/09/08 23:39:22 G:/WWW/golang/src/chat/app/control/test.go:75: websocket: close 1001 (going away)
+2021/09/08 23:49:07 G:/WWW/golang/src/chat/app/control/test.go:75: websocket: close 1001 (going away)
+2021/09/08 23:49:49 G:/WWW/golang/src/chat/app/control/test.go:75: websocket: close 1001 (going away)
+2021/09/09 11:18:47 G:/WWW/golang/src/chat/server/wsServ.go:75: websocket: close 1001 (going away)
+2021/09/09 13:42:59 G:/WWW/golang/src/chat/server/wsServ.go:79: websocket: close 1001 (going away)
+2021/09/09 13:43:10 G:/WWW/golang/src/chat/server/wsServ.go:79: websocket: close 1001 (going away)
+2021/09/09 13:44:28 G:/WWW/golang/src/chat/server/wsServ.go:79: websocket: close 1001 (going away)
+2021/09/09 13:47:34 G:/WWW/golang/src/chat/server/wsServ.go:78: 客户端：1 退出
+2021/09/09 13:47:35 G:/WWW/golang/src/chat/server/wsServ.go:80: websocket: close 1001 (going away)

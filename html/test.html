@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta charset="UTF-8">
+  <script src="./jquery-1.11.1.min.js" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+    var exampleSocket = new WebSocket("ws://127.0.0.1:8090/ws/test");
+    exampleSocket.onopen = function (event) {
+       console.log(event);
+        $('#contents').append(event);
+    };
+    exampleSocket.onmessage = function (event) {
+        console.log(event);
+        $('#contents').append(event);
+    };
+    /**
+     * 连接关闭事件
+     */
+    exampleSocket.onclose = function (event) {
+	alert('您已退出聊天室');
+        //if (confirm("聊天服务器已关闭")) {
+            //alert('您已退出聊天室');
+            //location.href = 'index.html';
+        //}
+    };
+    function sendall(){
+        var cont = 1;
+        exampleSocket.send(cont);
+    }
+  </script>
+</head>
+<body>
+<input  type="text" id="content">
+<button  onclick="sendall()">发送</button>
+<div id="contents">
+
+</div>
+</body>
+</html>

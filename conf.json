@@ -1,0 +1,27 @@
+{
+  "Db": {
+    "DbHost": "",
+    "DbUser": "",
+    "DbPwd": "",
+    "DbPort": 3306,
+    "DbPrefix": ""
+  },
+  "Redis": {
+    "Stat": "off",
+    "RedisHost": "127.0.0.1",
+    "RedisPort": "6379",
+    "RedisPrefix": "task_",
+    "RedisPwd": "",
+    "RedisDb": 9
+  },
+  "Setting": {
+    "ServerName": "Chat",
+    "LogFile": "G:\\WWW\\golang\\src\\chat\\go_chat.log",
+    "PidFile": "G:\\WWW\\golang\\src\\chat\\go_chat.pid",
+    "Daemonize": 0
+  },
+  "Server": {
+    "http": "127.0.0.1:8089",
+    "ws": "127.0.0.1:8090"
+  }
+}
